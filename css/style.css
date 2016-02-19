@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+body {
+  /* propertyName: value; */
+  /*font-family allows us to add multiple fallback fonts to our page in order of preference*/
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  /*line-height is relative to font size*/
+  line-height: 1.8;
+  /*use text-align to aline text and images only*/
+  text-align: center;
+  background-color: #d4d4d4;
+  color: #585858;
+}
+
+header {
+  /*Aim: To get the logo into the middle of the header and show a background image*/
+
+  /*Padding pushes the content away from the inside of the box. Padding increases the size of the box and takes 4 values, top, right, botton, left*/
+  padding: 200px 0 200px 0;
+
+ /*note the .. which instructs the sheet to navigate up a folder level (unlike html*/
+  background-image: url(../images/splash.jpg);
+
+  /*backgroun-position allows us to move the image around in header. We want to see the bottom half to have more contrast with our logo. This takes two values; horizontal alignment and vertical*/
+  background-position: center bottom;
+
+  /*we also don't want the background to repeat so we'll turn this off*/
+  background-repeat: no-repeat;
+
+  /*the following rule allows us to make the background image fill the screen no matter what size*/
+  background-size: cover;
+}
+
+  nav {
+
+    background-color: #ffda0d;
+    padding: 20px 0 20px 0;
+}
+
+  /*to style links inside of the nav tag only*/
+nav a {
+
+  /*to capitalise*/
+  text-transform: uppercase;
+
+  /*to make the text bold*/
+  font-weight: bold;
+  color: #444444;
+
+  /*get rid of underlines*/
+  text-decoration: none;
+
+  /*pad the area around the text*/
+  padding: 0 20px 0 20px;
+
+
+}
+
+  /*lets change the behaviour of the text when hovered over*/
+nav a:hover {
+  text-decoration: underline;
+  color: #585858;
+}
+
+section {
+
+  /*max-width allows sections to be 720px wide at maximum width but also allows the sections to shrink on smaller screen sizes*/
+  max-width: 720px;
+  background-color: #ffffff;
+
+ /*elements on our page have default display properties. they are either inline or block. inline elements like text images and anchor tags sit on one line together as far as there is room. These can be centrally aligned using text-align: center. block elements stack on top of one another like bricks and can only be centrally aligned using margin 0 auto 0 auto;*/
+
+ /*auto ensures that the margin on either side of our section is the same no matter the width of the browser*/
+
+  margin: 0 auto 0 auto;
+  padding: 40px;
+
+
+}
+
+h2 {
+
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-top: 40px;
+
+
+}
+
+h3 {
+
+  margin-bottom: 30px;
+  color: #a3a3a3;
+  text-transform: uppercase;
+
+}
+
+  /*we can apply rules to two elements at the same time by adding a "," */
+
+p,blockquote {
+
+  font-size: 22px;
+  font-weight: 300;
+  margin: 20px 0 20px 0;
+
+}
+
+footer {
+
+  background-color: #ffda0d;
+  padding: 40px 0 40px 0;
+
+
+}
+
+ /*we're going to tell the small text to behave like a block using display*/
+
+small {
+
+  display: block;
+  margin-top: 20px;
+
+}
+
+  /*so we're only applying styling to the section we named "quote" therefore we leave out "section"*/
+
+.quote {
+
+background-color: #ffda0d
+
+}
+
+  /*media queries*/
+@media screen and (max-width: 720px) {
+
+  /*stop images and iframes from breaking the layour by being larger than the section width*/
+  img, iframe {
+
+    /*this sets the images and iframes to a maximum width of 100% of their parent containers (ie the sections they are sitting inside of) */
+
+    max-width: 100%;
+
+
+  }
+
+ /*reduce padding around the header for smaller screen sizes*/
+
+header {
+
+  padding: 100px 20px 100px 20px
+
+}
+
+
+  /*make the anchor text stack on top of another to create a mobile menu*/
+
+nav a {
+
+display:block;
+
+
+}
+
+}
